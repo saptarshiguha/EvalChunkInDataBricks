@@ -112,7 +112,6 @@ sendSelection <- function(){
     ctx <- getOption("dbRcontext")
     f <- paste( content[whereisStart:whereisEnd], collapse='\n')
     cid3 <- dbxRunCommand(f,ctx=ctx,language='r',wait=3)
-    print(cid3)
     processCommand(cid3)
 
   }else if(lang=='r'){
