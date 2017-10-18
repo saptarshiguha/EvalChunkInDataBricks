@@ -101,15 +101,15 @@ sendSelection <- function(){
     cid3 <- dbxRunCommand(f,ctx=ctx,language='python',wait=3)
     processCommand(cid3)
   }else if(lang=='rdbx'){
-    if(is.null(getOption("dbRcontext"))){
-      r <- dbxCtxMake(language='r')
+    if(is.null(getOption("dbpycontext"))){
+      r <- dbxCtxMake()
       while(TRUE){
         ctxStats <- dbxCtxStatus(r)
         if(isContextRunning(ctxStats)) break
       }
-      options(dbRcontext=r)
+      options(dbpycontext=r)
     }
-    ctx <- getOption("dbRcontext")
+    ctx <- getOption("dbpycontext")
     f <- paste( content[whereisStart:whereisEnd], collapse='\n')
     cid3 <- dbxRunCommand(f,ctx=ctx,language='r',wait=3)
     processCommand(cid3)
