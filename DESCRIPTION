@@ -1,12 +1,11 @@
 Package: SendSelectionToConsole
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Sends RMarkdown Chunk to Databricks API
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Saptarshi Guha
+Maintainer: Saptarshi Guha <saptarshi.guha@gmail.com>
+Description: Keep your cursor in a chunk, it sends the chuck to the remote DataBricks API context
+License: GPL v3
 Encoding: UTF-8
 LazyData: true
 Depends:
