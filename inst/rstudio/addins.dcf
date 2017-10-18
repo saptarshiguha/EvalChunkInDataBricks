@@ -1,0 +1,4 @@
+Name: Send selection to Some R Interpreter
+Description: Sends selected code to Databricks Remote API
+Binding: sendSelection
+Interactive: false
